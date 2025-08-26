@@ -1,0 +1,167 @@
+%-------------------------
+% Resume in Latex
+% Author : Jessica Hamilton
+% Website: https://github.com/jessicant/hamiltonResume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/jessicant}{\Large Jessica Hamilton}} & Email : \href{mailto:jesshamilton159@gmail.com}{jesshamilton159@gmail.com}\\
+  \href{http://github.com/jessicant}{http://github.com/jessicant} & Mobile : +1-360-913-2491 \\
+\end{tabular*}
+
+%-------- SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+      \resumeItemListStart
+        \resumeItem{Languages}
+          {Java, Python, SQL, Rust, R, Bash}
+        \resumeItem{Cloud}
+          {AWS, Distributed Systems, High Availability, Scalability, Serverless, Microservices}
+        \resumeItem{Development Tools}
+          {Git, Linux, CI/CD, Test Automation, Monitoring, Logging}
+        \resumeItem{Methodologies + Other}
+          {Agile/Scrum, System Design, Data Management, Compliance}
+      \resumeItemListEnd
+ \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+    {Amazon Web Services (AWS) DynamoDB}{Seattle, WA}
+    {Software Engineer}{January 2023 -- Present}
+    \resumeItemListStart
+      \resumeItem{Metadata Cleanup Sweeper}
+        {Built sweeper that reduced 1.1M table entries to 100K, preventing future buildup; cut anti-entropy job runtime from 6 hours to 5 minutes.}
+      \resumeItem{Multi-Region Strong Consistency Launch}
+        {Conducted 750K TPS scale test, benchmarked latency, and identified 15 launch-blocking bugs; ensured stability for early access and public launch.}
+      \resumeItem{Load Balancing Algorithm}
+        {Designed and implemented round-robin assignment for multi-region replication, sustaining 99.99\% availability while meeting internal latency SLAs.}
+      \resumeItem{Control Plane Canary Framework}
+        {Developed robust framework for multi-region strong consistency, enabling consistent, reliable, and thorough creation of 59 canaries.}
+      \resumeItem{Robust Delete Path Retries}
+        {Added retries to the multi-region consistency delete path, reducing non-actionable or redundant oncall pages by 28 per month.}
+      \resumeItem{Availability \& Oncall}
+        {Participated in oncall rotation before and through launch of multi-region strong consistency, maintaining 99.99\% availability for customers.}
+      \resumeItem{Monitoring \& Dashboards}
+        {Designed initial dashboard for multi-region strong consistency and defined 22 critical KPIs for leadership visibility and operational health.}
+      \resumeItem{Operational Alarming \& Runbooks}
+        {Added 10 new tickets and alarms to guide operators in maintaining 99.99\% availability; authored runbooks to direct responses.}
+      \resumeItem{GDPR Cleanup Automation}
+        {Designed cross-service automation for account-deletion cleanup (GTV1, GTV2, multi-region), eliminating \textasciitilde40 manual tickets monthly across 3 teams.}
+      \resumeItem{Service-to-Service Security}
+        {Implemented resilient service-to-service interactions using jittered retries and IAM policies, adhering to the rule of least privilege.}
+      \resumeItem{Mentorship}
+        {Guided 2 interns and 4 junior engineers with technical teaching and code reviews, accelerating onboarding and enabling delivery of production-ready code.}
+    \resumeItemListEnd
+
+
+
+
+  \resumeSubheading
+    {Amazon Web Services (AWS) DynamoDB}{Seattle, WA}
+    {Software Engineering Intern}{June 2022 -- September 2022}
+    \resumeItemListStart
+      \resumeItem{Parallelization Project}
+        {Parallelized a core engineering workflow in Python using multi-threading, saving an estimated 5 software engineering years annually.}
+    \resumeItemListEnd
+ \resumeSubHeadingListEnd
+%-----------VOLUNTEER WORK-----------------
+\section{Volunteer}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Camp Oasis}{Seattle, WA}
+      {Volunteer Instructor}{Summer 2025}
+      \resumeItemListStart
+        \resumeItem{Teaching}
+          {Led and taught a class of 50+ students (ages 6--13) living with Crohn’s disease or ulcerative colitis, introducing programming fundamentals through Scratch.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{GDPR-Friendly Key-Value Store}
+      {Designed prototype data store with compliance-focused API for GDPR workflows: create, put, export, and delete with full audit logging.}
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Washington}{Seattle, WA}
+      {BA with Concentration in Information Systems; GPA: 3.89}{Sep. 2018 -- Dec. 2021}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
