@@ -13,8 +13,8 @@ Get started quickly using [Overleaf](https://www.overleaf.com/latex/templates/so
 ### Build using Docker
 
 ```sh
-docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex jessica_hamilton_resume.tex
+$pwdPath = (Get-Location).Path
+docker run --rm -v "${pwdPath}:/data" latex pdflatex jess_hamilton_resume.tex
 ```
 
 ### Preview
