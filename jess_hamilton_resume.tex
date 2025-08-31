@@ -76,23 +76,9 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://github.com/jessicant}{\Large Jessica Hamilton}} & Email : \href{mailto:jesshamilton159@gmail.com}{jesshamilton159@gmail.com}\\
-  \href{http://github.com/jessicant}{http://github.com/jessicant} & Mobile : +1-360-913-2491 \\
+  \href{https://github.com/jessicant}{github.com/jessicant} & Mobile : +1-360-913-2491 \\
 \end{tabular*}
 
-%-------- SKILLS------------
-\section{Skills}
- \resumeSubHeadingListStart
-      \resumeItemListStart
-        \resumeItem{Languages}
-          {Java, Python, SQL, Rust, R, Bash}
-        \resumeItem{Cloud}
-          {AWS, Distributed Systems, High Availability, Scalability, Serverless, Microservices}
-        \resumeItem{Development Tools}
-          {Git, Linux, CI/CD, Test Automation, Monitoring, Logging}
-        \resumeItem{Methodologies + Other}
-          {Agile/Scrum, System Design, Data Management, Compliance}
-      \resumeItemListEnd
- \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
@@ -102,40 +88,30 @@
     {Software Engineer}{January 2023 -- Present}
     \resumeItemListStart
       \resumeItem{Metadata Cleanup Sweeper}
-        {Built sweeper that reduced 1.1M table entries to 100K, preventing future buildup; cut anti-entropy job runtime from 6 hours to 5 minutes.}
-      \resumeItem{Multi-Region Strong Consistency Launch}
-        {Conducted 750K TPS scale test, benchmarked latency, and identified 15 launch-blocking bugs; ensured stability for early access and public launch.}
+        {Engineered scalable sweeper for a critical metadata table, safely reducing 1.1M entries to 100K; cut replication delays and consistency checks from 6h to 5m without throttling customer operations.}
+      \resumeItem{Replication Metadata Trimming}
+        {Designed and implemented trimming of replication metadata for multi-region customer tables, reducing storage by 57\% while honoring EU “right to be forgotten” requirements and avoiding impact to ongoing replication.}
       \resumeItem{Load Balancing Algorithm}
-        {Designed and implemented round-robin assignment for multi-region replication, sustaining 99.99\% availability while meeting internal latency SLAs.}
+        {Designed and implemented round-robin replication strategy across regions, sustaining 99.99\% availability while meeting internal latency SLAs.}
       \resumeItem{Control Plane Canary Framework}
-        {Developed robust framework for multi-region strong consistency, enabling consistent, reliable, and thorough creation of 59 canaries.}
-      \resumeItem{Robust Delete Path Retries}
-        {Added retries to the multi-region consistency delete path, reducing non-actionable or redundant oncall pages by 28 per month.}
-      \resumeItem{Availability \& Oncall}
-        {Participated in oncall rotation before and through launch of multi-region strong consistency, maintaining 99.99\% availability for customers.}
+        {Migrated DynamoDB from single-region to multi-region canary validation; built framework enabling region-isolated testing and consistent creation of 59 long-running canaries.}
       \resumeItem{Monitoring \& Dashboards}
-        {Designed initial dashboard for multi-region strong consistency and defined 22 critical KPIs for leadership visibility and operational health.}
-      \resumeItem{Operational Alarming \& Runbooks}
-        {Added 10 new tickets and alarms to guide operators in maintaining 99.99\% availability; authored runbooks to direct responses.}
-      \resumeItem{GDPR Cleanup Automation}
-        {Designed cross-service automation for account-deletion cleanup (GTV1, GTV2, multi-region), eliminating \textasciitilde40 manual tickets monthly across 3 teams.}
-      \resumeItem{Service-to-Service Security}
-        {Implemented resilient service-to-service interactions using jittered retries and IAM policies, adhering to the rule of least privilege.}
+        {Defined 22 product-focused KPIs and built dashboards translating raw metrics into leadership-friendly signals; dashboards were used in senior leadership go/no-go launch decisions.}
+      \resumeItem{EU Data Regulation Cleanup Automation}
+        {Coordinated automated account-deletion cleanup across 40 engineers for global tables, ensuring compliance with EU “right to be forgotten” data regulation laws and eliminating \textasciitilde40 manual tickets monthly.}
       \resumeItem{Mentorship}
-        {Guided 2 interns and 4 junior engineers with technical teaching and code reviews, accelerating onboarding and enabling delivery of production-ready code.}
+        {Mentored 2 interns and 4 junior engineers through design guidance and code reviews, accelerating onboarding and enabling production-level contributions.}
     \resumeItemListEnd
-
-
-
 
   \resumeSubheading
     {Amazon Web Services (AWS) DynamoDB}{Seattle, WA}
     {Software Engineering Intern}{June 2022 -- September 2022}
     \resumeItemListStart
-      \resumeItem{Parallelization Project}
-        {Parallelized a core engineering workflow in Python using multi-threading, saving an estimated 5 software engineering years annually.}
+      \resumeItem{Workflow Parallelization}
+        {Optimized internal testing tool used by 300+ DynamoDB engineers; designed and implemented multithreaded setup that cut environment provisioning time from 5h to 30m at p99, accelerating service development and launch velocity.}
     \resumeItemListEnd
  \resumeSubHeadingListEnd
+
 %-----------VOLUNTEER WORK-----------------
 \section{Volunteer}
   \resumeSubHeadingListStart
@@ -148,12 +124,24 @@
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
+
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{GDPR-Friendly Key-Value Store}
-      {Designed prototype data store with compliance-focused API for GDPR workflows: create, put, export, and delete with full audit logging.}
+    \resumeSubheading
+      {GDPR-Friendly Key-Value Store}{\href{https://github.com/jessicant/GDPR-KV}{GitHub} \textbar{} \href{https://docs.google.com/document/d/1oFiOTBT4e-9KTA5CQ2Vl7vVi_JmQf0DTA2GCq-XslmY/edit?tab=t.0}{Design Doc}}
+      {Designer \& Developer}{2025}
+      \resumeItemListStart
+        \resumeItem{Subject-Centric Data Layer}
+          {Added subject→keys mapping and API (Create, Put, Get, Delete) with validations, tombstoning, and precise retention.}
+        \resumeItem{Tamper-Evident Audit Trail}
+          {Built append-only audit log with hash chaining, request IDs, and granular event types for immutable replay.}
+        \resumeItem{Erasure \& Retention Engine}
+          {Designed PurgeSweeper with GSI + transactional deletes to ensure provable, idempotent erasure post-retention.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -164,4 +152,11 @@
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
+%-------- SKILLS------------
+\section{Skills}
+\resumeItemListStart
+  \resumeItem{Languages}{Java, Python, SQL, Rust, Bash}
+  \resumeItem{Cloud}{AWS (DynamoDB, EC2, S3), Distributed Systems, Scalability, Data Durability, Compliance}
+\resumeItemListEnd
+
 \end{document}
