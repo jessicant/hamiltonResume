@@ -87,20 +87,18 @@
     {Amazon Web Services (AWS) DynamoDB}{Seattle, WA}
     {Software Engineer}{January 2023 -- Present}
     \resumeItemListStart
+      \resumeItem{Live Replication Ledger Sweeper}
+        {Negotiated the end-to-end design with engineering leadership and launched a safety-first cleanup system for the live replication ledger, striking the balance between cross-region sync, investigation trails, and GDPR/CCPA/HIPAA retention limits.}
       \resumeItem{Metadata Cleanup Sweeper}
-        {Engineered scalable sweeper for a critical metadata table, safely reducing 1.1M entries to 100K; cut replication delays and consistency checks from 6h to 5m without throttling customer operations.}
-      \resumeItem{Replication Metadata Trimming}
-        {Designed and implemented trimming of replication metadata for multi-region customer tables, reducing storage by 57\% while honoring EU “right to be forgotten” requirements and avoiding impact to ongoing replication.}
-      \resumeItem{Load Balancing Algorithm}
-        {Designed and implemented round-robin replication strategy across regions, sustaining 99.99\% availability while meeting internal latency SLAs.}
-      \resumeItem{Control Plane Canary Framework}
-        {Migrated DynamoDB from single-region to multi-region canary validation; built framework enabling region-isolated testing and consistent creation of 59 long-running canaries.}
+        {Blueprinted and implemented a scalable sweeper for a critical metadata table, safely reducing 1.1M entries to 100K; cut replication delays from six hours to five minutes and restored customer-facing consistency checks.}
+      \resumeItem{Global Tables GDPR Compliance}
+        {Launched a six-engineer workstream, auditing partner teams and later advising as a consultant so global tables teams could replace the 36 dev-days per quarter of risky manual cleanups with safe automation that keeps privacy promises.}
+      \resumeItem{Intern Mentorship \& GDPR Automation}
+        {Coached a first-time intern on my team from classroom experience to a return offer, teaching safe data-handling patterns and code quality so we could automate privacy deletions across regions without regressions.}
+      \resumeItem{Multi-Region Consistency Cleanup}
+        {Owned design-to-launch of a release-blocking strong-consistency feature that tightened the replica delete workflow, eliminating the orphaned encrypted copies table deletes used to leave behind in some regions and keeping the launch privacy-safe.}
       \resumeItem{Monitoring \& Dashboards}
         {Defined 22 product-focused KPIs and built dashboards translating raw metrics into leadership-friendly signals; dashboards were used in senior leadership go/no-go launch decisions.}
-      \resumeItem{EU Data Regulation Cleanup Automation}
-        {Coordinated automated account-deletion cleanup across 40 engineers for global tables, ensuring compliance with EU “right to be forgotten” data regulation laws and eliminating \textasciitilde40 manual tickets monthly.}
-      \resumeItem{Mentorship}
-        {Mentored 2 interns and 4 junior engineers through design guidance and code reviews, accelerating onboarding and enabling production-level contributions.}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -150,13 +148,13 @@
       {University of Washington}{Seattle, WA}
       {BA with Concentration in Information Systems; GPA: 3.89}{Sep. 2018 -- Dec. 2021}
   \resumeSubHeadingListEnd
-
-%-------------------------------------------
-%-------- SKILLS------------
-\section{Skills}
+  %-------------------------------------------
+  %-------- SKILLS------------
+  \section{Skills}
 \resumeItemListStart
-  \resumeItem{Languages}{Java, Python, SQL, Rust, Bash}
-  \resumeItem{Cloud}{AWS (DynamoDB, EC2, S3), Distributed Systems, Scalability, Data Durability, Compliance}
+  \resumeItem{Languages}{Java (primary), Python, SQL, Rust, Bash}
+  \resumeItem{Services}{DynamoDB, IAM, KMS, EC2, CDK, CloudWatch}
+  \resumeItem{Privacy \& Compliance Law}{GDPR/CCPA/HIPAA regulations, data lifecycle governance, automated cleanup workflows}
 \resumeItemListEnd
 
 \end{document}

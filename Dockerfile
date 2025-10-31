@@ -1,5 +1,5 @@
 FROM debian:stable-slim
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN echo "deb http://deb.debian.org/debian stable main" > /etc/apt/sources.list && \
     echo "deb http://deb.debian.org/debian stable-updates main" >> /etc/apt/sources.list && \
