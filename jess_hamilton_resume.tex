@@ -127,15 +127,17 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {GDPR-Friendly Key-Value Store}{\href{https://github.com/jessicant/GDPR-KV}{GitHub} \textbar{} \href{https://docs.google.com/document/d/1oFiOTBT4e-9KTA5CQ2Vl7vVi_JmQf0DTA2GCq-XslmY/edit?tab=t.0}{Design Doc}}
+      {Backend Key-Value Store}{\href{https://github.com/jessicant/GDPR-KV}{GitHub} \textbar{} \href{https://docs.google.com/document/d/1oFiOTBT4e-9KTA5CQ2Vl7vVi_JmQf0DTA2GCq-XslmY/edit?tab=t.0}{Design Doc}}
       {Designer \& Developer}{2025}
       \resumeItemListStart
-        \resumeItem{Subject-Centric Data Layer}
-          {Added subject→keys mapping and API (Create, Put, Get, Delete) with validations, tombstoning, and precise retention.}
-        \resumeItem{Tamper-Evident Audit Trail}
-          {Built append-only audit log with hash chaining, request IDs, and granular event types for immutable replay.}
-        \resumeItem{Erasure \& Retention Engine}
-          {Designed PurgeSweeper with GSI + transactional deletes to ensure provable, idempotent erasure post-retention.}
+        \resumeItem{Overview}
+          {A backend key–value store designed with privacy and compliance by default.}
+        \resumeItem{Data Management}
+          {Implemented user-centric data organization with full CRUD operations, validation, and configurable retention policies to support privacy requirements.}
+        \resumeItem{Audit \& Compliance}
+          {Built audit logging system to track all data operations, enabling compliance verification and investigation workflows.}
+        \resumeItem{Automated Data Deletion}
+          {Designed automated cleanup process to ensure timely data erasure in accordance with retention policies and privacy regulations.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -146,14 +148,14 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Washington}{Seattle, WA}
-      {BA with Concentration in Information Systems; GPA: 3.89}{Sep. 2018 -- Dec. 2021}
+      {BA with Concentration in Information Systems; GPA: 3.89}{Sep. 2018 -- Dec. 2022}
   \resumeSubHeadingListEnd
   %-------------------------------------------
   %-------- SKILLS------------
   \section{Skills}
 \resumeItemListStart
   \resumeItem{Languages}{Java (primary), Python, SQL, Rust, Bash}
-  \resumeItem{Services}{DynamoDB, IAM, KMS, EC2, CDK, CloudWatch}
+  \resumeItem{Technologies \& Services}{Spring Boot, Gradle, OpenAPI, DynamoDB, IAM, KMS, EC2, CDK, CloudWatch}
   \resumeItem{Privacy \& Compliance Law}{GDPR/CCPA/HIPAA regulations, data lifecycle governance, automated cleanup workflows}
 \resumeItemListEnd
 
